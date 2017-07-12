@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="EsConnector">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Example for Ravvu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>  
+    <script src="js/elasticsearch.angular.js"></script>
+
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script type="text/javascript" src="js/gauge.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="http://momentjs.com/downloads/moment.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div ng-controller="QueryController">
+        <div class="gauges flexbox-container">
+            <div class="device-gateway">
+                <h1>Device gateway</h1>
+                <span id="ampsGaugeContainer"></span>
+                <span id="speedGaugeContainer"></span>
+                <span id="voltageGaugeContainer"></span><br>
+                <span class="timestamp">{{data.devicegateway.timestamp}}</span>
+                <div class="color-block" ng-style="{'background-color': data.devicegateway.color }">{{data.devicegateway.color}}</div>
+            </div>
+
+            <span class="seperator"></span>
+
+            <div class="aws">
+                <h1>AWS</h1><span id="ampsnewGaugeContainer">
+                </span>
+                <span id="speednewGaugeContainer"></span>
+                <span id="voltagenewGaugeContainer"></span><br>
+                <span class="timestamp">{{data.aws.timestamp}}</span>
+                <div class="color-block" ng-style="{'background-color': data.aws.color }">{{data.aws.color}}</div>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>

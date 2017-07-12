@@ -1,0 +1,60 @@
+body {
+    font: 10px arial;
+}
+
+.gauges {
+    text-align:center;
+}
+
+.device-gateway, .aws {
+    display :inline-block;
+}
+
+.device-gateway span, .aws span {
+    position:relative;
+    display:inline-block;
+}
+
+.aws {
+}
+
+.seperator{
+    display:inline-block;
+    border: 1px solid black;
+    height: 480px;
+    margin:0 20px;
+}
+
+.color-block {
+    height: 200px;
+    width: 400px;
+    margin:0 auto;
+    background-color: white;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.timestamp {
+    font-size: 18px;
+    padding: 10px;
+    display:block;
+}
+
+.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flexbox-container > div {
+	width: 50%;
+	padding: 10px;
+}
+
+.flexbox-container > div:first-child {
+	margin-right: 20px;
+}
